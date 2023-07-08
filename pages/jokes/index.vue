@@ -15,7 +15,6 @@ export default {
     data () {
         return {
            jokes: [],
-           //error: ''
         };
     },
 
@@ -28,8 +27,6 @@ export default {
 
         try {
             const res= await axios.get("https://icanhazdadjoke.com/search", config);
-
-             //console.log(res.data);
 
             this.jokes = res.data.results;
             this.error = err;
